@@ -1,0 +1,4 @@
+git clone https://github.com/epinna/weevely3.git $HOME/shells/weevely3
+cd $HOME/shells/weevely3
+sudo pip3 install -r requirements.txt --upgrade
+cd $SCRIPTROOT

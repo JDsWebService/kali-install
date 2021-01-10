@@ -1,0 +1,26 @@
+[global_config]
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  always_split_with_profile = True
+[keybindings]
+  split_horiz = <Primary>KP_Up
+  split_vert = <Primary>KP_Right
+[profiles]
+  [[default]]
+    background_darkness = 0.47
+    cursor_color = "#aaaaaa"
+  [[Monokai dark]]
+    background_color = "#272822"
+    background_darkness = 0.47
+    cursor_color = "#ffffff"
+    foreground_color = "#f8f8f2"
+    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = Monokai dark
+[plugins]
