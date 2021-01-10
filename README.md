@@ -58,3 +58,5 @@ This script installs various programs, applications, and services to your machin
 TL;DR
 
 You fucking hack shit you aren't supposed to, thats on you. You get into some legal trouble, not my problem. If you're dumb enough to do stupid shit then you're to dumb to not be behind bars. Period. End of Discussion. *End rant*
+
+*Created On: 1/9/2021*
