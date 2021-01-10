@@ -4,11 +4,16 @@ To get the repo run the following command to clone into your home directory.
 
 ```
 git clone https://github.com/JDsWebService/kali-install.git $HOME/kali-install
+cd $HOME/kali-install
 ```
 
-Then run `setup.sh`
+Then run `setup.sh` to start the installation process.
 
 *Note: This script is semi-autonomous. The software packages will sometimes ask you questions during the installation process.*
+
+# WARNING
+
+This script assumes that you are using the GNOME desktop environment. xfce & kde are **NOT** supported by this script!
 
 # Contributing Authors / Packages
 
@@ -41,6 +46,10 @@ https://software.opensuse.org/download.html?project=hardware%3Arazer&package=ope
 Polychromatic
 
 https://polychromatic.app/download/debian/
+
+Weevely3
+
+https://github.com/epinna/weevely3
 
 # Legal Notice
 
