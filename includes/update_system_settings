@@ -8,20 +8,3 @@ gsettings set org.gnome.settings-daemon.plugins.power power-button-action "inter
 gsettings set org.gnome.desktop.peripherals.mouse speed -0.72500000000000000
 # Show seconds in your clock
 gsettings set org.gnome.desktop.interface clock-show-seconds true
-
-# Disable All Other Screenshot Keys
-gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot-clip "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot-clip "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys screencast "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot "['']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['']"
-
-# Install GNOME Tweaks, Themes, Icons, & Whatever Else Relating To The UI/UX
-sudo cp -r $SCRIPTICONS/* /usr/share/icons
-cp -r $SCRIPTWALLPAPERS $HOME/Pictures
-gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Flatery-Indigo"
-gsettings set org.gnome.desktop.background picture-uri "file:///home/${USER}/Pictures/wallpaper/kali-minimal.png"
-gsettings set org.gnome.desktop.screensaver picture-uri "file:///home/${USER}/Pictures/wallpaper/kali-minimal.png"

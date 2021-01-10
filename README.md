@@ -1,15 +1,39 @@
 # Installation
 
-To get the repo run the following command to clone into your home directory.
+Copy and paste the code block below to start the installation process.
 
 ```
 git clone https://github.com/JDsWebService/kali-install.git $HOME/kali-install
 cd $HOME/kali-install
+chmod +x setup.sh
+./setup.sh
 ```
 
-Then run `setup.sh` to start the installation process.
-
 *Note: This script is semi-autonomous. The software packages will sometimes ask you questions during the installation process.*
+
+## Post Installation
+
+In order to fully install everything, run the following commands after the script is done executing.
+
+```
+cd $HOME/kali-install
+cp config_files/.zshrc $HOME/.zshrc
+source $HOME/.zshrc
+sudo protonvpn init
+```
+
+## Installation Notes
+
+Some notes here are listed for reference purposes and testing. These will mainly be answering questions that are prompted during the installation process. These will be in order from seen first to seen last.
+
+### Configuring lightdm (Blue Screen)
+
+- Hit `OK`
+- Choose `gdm3`
+
+### xfce Configuration File
+
+- Answer `N` for no. This will keep the currently installed version of the desktop environment
 
 # WARNING
 
