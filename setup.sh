@@ -11,6 +11,7 @@ SCRIPTINCLUDES=$SCRIPTROOT/includes
 
 # Define Time The Script Was Run
 timestamp="$(date +"%T")"
+mkdir $SCRIPTOUTPUT
 touch $SCRIPTOUTPUT/$timestamp.log
 SCRIPTLOG=$SCRIPTOUTPUT/$timestamp.log
 
