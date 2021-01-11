@@ -69,7 +69,7 @@ source $SCRIPTINCLUDES/install_dirbuster.sh
 printMsg "setup.sh" "Installing ProtonVPN"
 sudo pip3 install protonvpn-cli
 printMsg "setup.sh" "ProtonVPN Installed! Make sure that you run the protonvpn init command after this script is finished running."
-read "Press [ENTER] to continue..."
+read "protonContinue?Press [ENTER] to continue..."
 
 ###################
 # Install Discord #
