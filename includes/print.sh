@@ -1,7 +1,7 @@
 # Print Functions
 
 function printMsg() {
-	printf "\nJDsWebService/Kali-Install@$1: $2\n\n"
+	printf "\nJDsWebService/Kali-Install@$1: $2\n"
 }
 
 function printBanner() {
