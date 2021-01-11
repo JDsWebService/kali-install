@@ -19,3 +19,4 @@
 - Changed all includes to have the `.sh` extension for easier reading in Sublime Text
 - Added Script Banner
 - Added Script Print Functions
+- Added a `mkdir` command for Script Output

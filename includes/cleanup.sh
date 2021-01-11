@@ -1,5 +1,8 @@
 {
-	printMsg "clean.sh: Clean Up Some Things Before The Installation Processes\n\n"
+	printMsg "cleanup.sh" "Clean Up Some Things Before The Installation Processes"
+
+	
 	sudo apt-get remove docker docker-engine docker.io containerd runc
+	
 	sudo apt update
-} | tee -a $SCRIPTLOG
+} 2>&1 | tee /tmp/ls.txt

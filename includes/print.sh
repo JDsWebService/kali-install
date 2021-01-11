@@ -1,10 +1,11 @@
 # Print Functionality
 
 function printMsg() {
-	printf "JDsWebService/Kali-Install: $1\n"
+	printf "JDsWebService/Kali-Install@$1: $2\n\n"
 }
 
 function printBanner() {
+	printf "\n"
 	printf "#####################################################################\n"
 	printf "#                                                                   #\n"
 	printf "#                __  ___      ___       __       __                 #\n"
@@ -25,4 +26,5 @@ function printBanner() {
 	printf "#   penetration testing tools. See README.md for more information.  #\n"
 	printf "#                                                                   #\n"
 	printf "#####################################################################\n"
+	printf "\n"
 }
