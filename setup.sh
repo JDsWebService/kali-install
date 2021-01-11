@@ -1,6 +1,18 @@
 #!/usr/bin/env zsh
 
-# Define Directories Used By Script
+###########################
+# Include Print Functions #
+###########################
+source $SCRIPTINCLUDES/print.sh
+
+# Print Script Banner
+printBanner
+
+#####################################
+# Define Directories Used By Script #
+#####################################
+printMsg "setup.sh" "Defining variables to be used throughout the script"
+
 SCRIPTROOT=$HOME/kali-install
 SCRIPTAPPS=$SCRIPTROOT/apps
 SCRIPTCONFIGS=$SCRIPTROOT/config_files
@@ -8,19 +20,13 @@ SCRIPTICONS=$SCRIPTROOT/icons
 SCRIPTWALLPAPERS=$SCRIPTROOT/wallpaper
 SCRIPTOUTPUT=$SCRIPTROOT/script_output
 SCRIPTINCLUDES=$SCRIPTROOT/includes
+TIMESTAMP="$(date +"%T")"
 
 # Define Time The Script Was Run
-timestamp="$(date +"%T")"
-mkdir $SCRIPTOUTPUT
-touch $SCRIPTOUTPUT/$timestamp.log
-SCRIPTLOG=$SCRIPTOUTPUT/$timestamp.log
-
-###########################
-# Include Print Functions #
-###########################
-source $SCRIPTINCLUDES/print.sh
-
-printBanner
+printMsg "setup.sh" "Creating Script Output File"
+mkdir -p $SCRIPTOUTPUT
+touch $SCRIPTOUTPUT/$TIMESTAMP.log
+SCRIPTLOG=$SCRIPTOUTPUT/$TIMESTAMP.log
 
 ##########################
 # Update System Settings #
@@ -59,7 +65,10 @@ source $SCRIPTINCLUDES/install_dirbuster.sh
 # Install ProtonVPN: Will continue installation #
 # process after the script finalizes.           #
 #################################################
+printMsg "setup.sh" "Installing ProtonVPN"
 sudo pip3 install protonvpn-cli
+printMsg "setup.sh" "ProtonVPN Installed! Make sure that you run the protonvpn init command after this script is finished running."
+read "Press [ENTER] to continue..."
 
 ###################
 # Install Discord #
@@ -103,12 +112,14 @@ fi
 # Install GPU Drivers #
 #######################
 if [[ $INSTALL_GPU == 'y' ]]; then
+	printMsg "setup.sh" "Installing nVidia Drivers"
 	sudo apt install -y nvidia-driver nvidia-cuda-toolkit
 fi
 
 ###############################
 # Update & Upgrade Everything #
 ###############################
+printMsg "setup.sh" "Updating & Upgrading Everything"
 sudo apt update
 sudo apt -y full-upgrade -y
 
@@ -120,9 +131,11 @@ source $SCRIPTINCLUDES/update_user_themes.sh
 ###############################
 # Copy Scripts To Home Folder #
 ###############################
+printMsg "setup.sh" "Copying Scripts to Home Folder"
 cp -r $SCRIPTROOT/scripts $HOME/scripts
 
 #####################
 # Install Oh-My-ZSH #
 #####################
+printMsg "setup.sh" "Installing Oh-My-ZSH"
 source $SCRIPTINCLUDES/install_omzsh.sh

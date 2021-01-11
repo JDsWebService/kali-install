@@ -131,12 +131,12 @@ alias listen="nc -lvnp 13337"
 alias imgur="$HOME/imgur-screenshot/imgur-screenshot -l true"
 
 # Proton VPN
-alias pvpn-open="protonvpn-cli c"
-alias pvpn-fast="protonvpn-cli c -f"
-alias pvpn-random="protonvpn-cli c -r"
-alias pvpn-refresh="protonvpn-cli r"
-alias pvpn-close="protonvpn-cli d"
-alias pvpn-status="protonvpn-cli s"
+alias pvpn-open="protonvpn c"
+alias pvpn-fast="protonvpn c -f"
+alias pvpn-random="protonvpn c -r"
+alias pvpn-refresh="protonvpn r"
+alias pvpn-close="protonvpn d"
+alias pvpn-status="protonvpn s"
 
 # Weevely 3
 # Ref: https://github.com/epinna/weevely3/wiki/Getting-Started
