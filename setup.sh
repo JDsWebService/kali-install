@@ -9,10 +9,22 @@ SCRIPTWALLPAPERS=$SCRIPTROOT/wallpaper
 SCRIPTOUTPUT=$SCRIPTROOT/script_output
 SCRIPTINCLUDES=$SCRIPTROOT/includes
 
+# Define Time The Script Was Run
+timestamp="$(date +"%T")"
+touch $SCRIPTOUTPUT/$timestamp.log
+SCRIPTLOG=$SCRIPTOUTPUT/$timestamp.log
+
+###########################
+# Include Print Functions #
+###########################
+source $SCRIPTINCLUDES/print.sh
+
+printBanner
+
 ##########################
 # Update System Settings #
 ##########################
-source $SCRIPTINCLUDES/update_system_settings
+source $SCRIPTINCLUDES/update_system_settings.sh
 
 # Ask the user some questions
 read -q "INSTALL_GPU?Install GPU Drivers? (y,n): "
@@ -23,24 +35,24 @@ printf "\n"
 #########################
 # Clean Up Old Software #
 #########################
-source $SCRIPTINCLUDES/cleanup
+source $SCRIPTINCLUDES/cleanup.sh
 
 #################################################
 # Install Apt Software: Can be downloaded with  #
 # "apt install" without any other modifications #
 # needed                                        #
 #################################################
-source $SCRIPTINCLUDES/install_standalone
+source $SCRIPTINCLUDES/install_standalone.sh
 
 #####################
 # Install Syncthing #
 #####################
-source $SCRIPTINCLUDES/install_syncthing
+source $SCRIPTINCLUDES/install_syncthing.sh
 
 #####################
 # Install DirBuster #
 #####################
-source $SCRIPTINCLUDES/install_dirbuster
+source $SCRIPTINCLUDES/install_dirbuster.sh
 
 #################################################
 # Install ProtonVPN: Will continue installation #
@@ -51,39 +63,39 @@ sudo pip3 install protonvpn-cli
 ###################
 # Install Discord #
 ###################
-source $SCRIPTINCLUDES/install_discord
+source $SCRIPTINCLUDES/install_discord.sh
 
 ##################
 # Install Docker #
 ##################
-source $SCRIPTINCLUDES/install_docker
+source $SCRIPTINCLUDES/install_docker.sh
 
 ########################
 # Install Sublime Text #
 ########################
-source $SCRIPTINCLUDES/install_sublime
+source $SCRIPTINCLUDES/install_sublime.sh
 
 ######################
 # Install Terminator #
 ######################
-source $SCRIPTINCLUDES/install_terminator
+source $SCRIPTINCLUDES/install_terminator.sh
 
 ##############################
 # Install Imgur Screenshot & #
 # Set Printscreen Keybind    #
 ##############################
-source $SCRIPTINCLUDES/install_imgur
+source $SCRIPTINCLUDES/install_imgur.sh
 
 ####################
 # Install Weevely3 #
 ####################
-source $SCRIPTINCLUDES/install_weevely
+source $SCRIPTINCLUDES/install_weevely.sh
 
 ######################################
 # Install Razer Open Source Software #
 ######################################
 if [[ $INSTALL_RAZER == 'y' ]]; then
-	source $SCRIPTINCLUDES/install_razer
+	source $SCRIPTINCLUDES/install_razer.sh
 fi
 
 #######################
@@ -102,7 +114,7 @@ sudo apt -y full-upgrade -y
 ######################
 # Update User Themes #
 ######################
-source $SCRIPTINCLUDES/update_user_themes
+source $SCRIPTINCLUDES/update_user_themes.sh
 
 ###############################
 # Copy Scripts To Home Folder #
@@ -112,4 +124,4 @@ cp -r $SCRIPTROOT/scripts $HOME/scripts
 #####################
 # Install Oh-My-ZSH #
 #####################
-source $SCRIPTINCLUDES/install_omzsh
+source $SCRIPTINCLUDES/install_omzsh.sh

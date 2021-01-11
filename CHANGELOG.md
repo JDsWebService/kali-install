@@ -12,4 +12,10 @@
 - Changed installation order to put installation of Oh-My-ZSH last as it kicks us out of the script
 - Updated `install_dirbuster` to include the force flag when removing the dirbuster directory from `apps`
 - Changed line 87 of `setup.sh` for syntax error
-- 
+
+#BETA x.x.x-003
+
+- Updated `.zshrc` to remove duplicate `/user/` folder when defining the `ZSH` variable. `$HOME` includes the users username, and theres no need to specify `$HOME/$USER/..`.
+- Changed all includes to have the `.sh` extension for easier reading in Sublime Text
+- Added Script Banner
+- Added Script Print Functions
