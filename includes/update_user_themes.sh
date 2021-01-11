@@ -7,5 +7,6 @@
 	gsettings set org.gnome.desktop.interface icon-theme "Flatery-Indigo"
 	gsettings set org.gnome.desktop.background picture-uri "file:///home/${USER}/Pictures/wallpaper/kali-minimal.png"
 	gsettings set org.gnome.desktop.screensaver picture-uri "file:///home/${USER}/Pictures/wallpaper/kali-minimal.png"
-
+	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position "BOTTOM"
+	
 } 2>&1 | tee -a $SCRIPTLOG
