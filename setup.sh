@@ -34,6 +34,7 @@ SCRIPTLOG=$SCRIPTOUTPUT/$TIMESTAMP.log
 source $SCRIPTINCLUDES/update_system_settings.sh
 
 # Ask the user some questions
+printf "\n"
 read -q "INSTALL_GPU?Install GPU Drivers? (y,n): "
 printf "\n"
 read -q "INSTALL_RAZER?Install Razer Open Source Software Packages? (y,n): "
