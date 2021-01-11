@@ -3,7 +3,7 @@
 ###########################
 # Include Print Functions #
 ###########################
-source $SCRIPTINCLUDES/print.sh
+source $HOME/kali-install/includes/print.sh
 
 # Print Script Banner
 printBanner
